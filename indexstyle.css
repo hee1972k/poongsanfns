@@ -29,6 +29,7 @@ div.grid-container{
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   margin: 15px;
+  grid-template: none;
 }
 
 div.grid-item {
@@ -210,10 +211,24 @@ span{
   color: black;
   font-weight: bold;
 }
+
 /*grid-item-edits*/
 .grid-item p{
-  opacity: 0;
+  margin: 0;
+  padding-left:0;
+  padding-right:0;
+  padding-top: 15vh;
+  color: white;
+  font-size: 250%;
+  font-weight: bold;
+  opacity: 1;
   transition-duration: 0.5s;
+}
+
+.grid-item span{
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
 }
 
 .grid-item{
@@ -230,6 +245,7 @@ span{
   opacity: 1;
   transition-duration: 0.5s;
 }
+
 .grid-item#gi-1{
   background-image: url(images/kodak_logo.png);
   background-size: contain;
