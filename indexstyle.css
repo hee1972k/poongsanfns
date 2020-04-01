@@ -213,7 +213,7 @@ span{
 }
 
 /*grid-item-edits*/
-.grid-item p{
+.brand-name{
   margin: 0;
   padding-left:0;
   padding-right:0;
@@ -221,7 +221,6 @@ span{
   color: white;
   font-size: 250%;
   font-weight: bold;
-  opacity: 1;
   transition-duration: 0.5s;
 }
 
@@ -232,24 +231,18 @@ span{
 }
 
 .grid-item{
-  opacity: 0.5;
-  transition-duration: 0.5s;
+  opacity: 0;
 }
 
 .grid-item:hover{
   opacity: 1;
-  transition-duration: 0.5s;
-}
-
-.grid-item:hover p{
-  opacity: 1;
-  transition-duration: 0.5s;
 }
 
 .grid-item#gi-1{
-  background-image: url(images/kodak_logo.png);
+  background-image: url(images/kodak_logo.png), linear-gradient(black, gray);
   background-size: contain;
 }
+
 .grid-item#gi-2{
   background-image: url(images/mlb_logo.png);
   background-size: contain;
@@ -277,4 +270,8 @@ span{
 .grid-item#gi-8{
   background-image: url(images/stretch_angels_logo.png);
   background-size: contain;
+}
+
+.name-panel#bn0{
+  opacity: 1;
 }
