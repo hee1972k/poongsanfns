@@ -1,6 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html{
+  height: 100%;
+  width: 100;
+}
+
 body{
   background-color: #ffffff;
-  font-family: 'Nanum Myeongjo';
+  /*font-family: 'Nanum Myeongjo';*/
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -23,36 +33,56 @@ div.main{
 }
 
 div.grid-container{
-  /*border: 1px solid white;*/
   display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 15px;
-  grid-row-gap: 15px;
-  margin: 15px;
-  grid-template: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 0px 15px;
 }
 
-div.grid-item {
+.grid-container a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+div.grid-item{
+  padding: 0px 50px;
+  margin: 0% 0% 3% 0%;
+  display: grid;
+  /*for checking of justification of contents*/
+  /*border: 1px solid white;*/
+
+}
+
+div.grid-item p {
+  width: 200px;
+  color: white;
+  font-size: 25px;
+}
+
+div.shortcut {
+  height: 200px;
+  width: 200px;
   background-color: white;
-  text-align: center;
-  height: 35vh;
-  width: 100%;
-  border-radius: 15px;
+  border-radius: 50px;
 }
 
-div.bottom{
-  background-color: white;
-  margin-top: 15px;
-}
+/*div.shortcut p{
+  padding-top: 95px;
+  font-size: 25px;
+  color: black;
+}*/
 
-div.bottom-contents{
-  text-align: center;
-  padding: 15px;
+div.shortcut:hover p{
+  height: 200px;
+  width: 200px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 h1.title{
   color: black;
-  font-family: 'Nanum Myeongjo';
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin-bottom: 0;
 }
@@ -119,7 +149,6 @@ li a:hover {
   display: none;
   list-style-type: none;
   text-decoration: none;
-  position: absolute;
   z-index: 1;
 }
 
@@ -134,6 +163,16 @@ div.dropdown-contents a{
 }
 
 /*bottom part*/
+div.bottom{
+  background-color: white;
+  margin-top: 1.5%;
+}
+
+div.bottom-contents{
+  text-align: center;
+  padding: 1.5%;
+}
+
 .bottom{
   overflow: auto;
   text-align: center;
@@ -155,6 +194,7 @@ div.dropdown-contents a{
   background-color: white;
   border-radius: 15px;
 }
+
 .bottom-contents-2{
   flex:1;
   text-align: left;
@@ -162,10 +202,6 @@ div.dropdown-contents a{
   padding: 15px;
   background-color: white;
   border-radius: 15px;
-}
-
-#media p{
-  margin-top: 0;
 }
 
 /*footer part*/
@@ -200,78 +236,47 @@ span{
   font-weight: bold;
 }
 
-/*location label*/
-#text p{
+/*bottom company info label*/
+#info p{
   margin: 0px 0px;
 }
 
-
-.grid-container a{
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+#media p{
+  margin-top: 0;
 }
 
-/*grid-item-edits*/
-.brand-name{
-  margin: 0;
-  padding-left:0;
-  padding-right:0;
-  padding-top: 15vh;
-  color: white;
-  font-size: 250%;
-  font-weight: bold;
-  transition-duration: 0.5s;
-}
 
-.grid-item span{
-  margin: 0;
-  padding: 0;
-  font-size: 15px;
-}
-
-.grid-item{
-  opacity: 0;
-}
-
-.grid-item:hover{
-  opacity: 1;
-}
-
-.grid-item#gi-1{
-  background-image: url(images/kodak_logo.png), linear-gradient(black, gray);
+.shortcut#sc-1{
+  background-image: url(images/kodak_logo.png);
   background-size: contain;
 }
 
-.grid-item#gi-2{
+.shortcut#sc-2{
   background-image: url(images/mlb_logo.png);
   background-size: contain;
 }
-.grid-item#gi-3{
+.shortcut#sc-3{
   background-image: url(images/new_era_logo.png);
   background-size: contain;
 }
-.grid-item#gi-4{
+.shortcut#sc-4{
   background-image: url(images/discovery_logo.png);
   background-size: contain;
 }
-.grid-item#gi-5{
+.shortcut#sc-5{
   background-image: url(images/polham_logo.jpg);
   background-size: contain;
 }
-.grid-item#gi-6{
+.shortcut#sc-6{
   background-image: url(images/puma_logo.png);
   background-size: contain;
 }
-.grid-item#gi-7{
+.shortcut#sc-7{
   background-image: url(images/mistral_logo.jpg);
   background-size: contain;
 }
-.grid-item#gi-8{
+.shortcut#sc-8{
   background-image: url(images/stretch_angels_logo.png);
   background-size: contain;
-}
-
-.name-panel#bn0{
-  opacity: 1;
+  background-repeat: no-repeat;
 }
