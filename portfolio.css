@@ -1,0 +1,11 @@
+a:visited {
+  text-decoration-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+a {
+  text-decoration-style: none;
+  text-decoration: none;
+  color: white;
+}

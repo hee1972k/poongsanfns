@@ -32,10 +32,37 @@ div.main{
   overflow: auto;
 }
 
+div.notification-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px 15px;
+}
+
 div.grid-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin: 0px 15px;
+}
+
+.notification-item{
+  background-color: #ffffff;
+  height: 100px;
+  margin: 15px 15px;
+  border-radius: 25px;
+}
+.notification-item p{
+  padding: 25px 0px;
+  color: white;
+}
+
+#ni-01{
+  background-color: darkred;
+}
+#ni-02{
+  background-color: yellowgreen;
+}
+#ni-03{
+  background-color: darkblue;
 }
 
 .grid-container a{
@@ -78,6 +105,7 @@ div.shortcut:hover p{
   border-radius: 50px;
   background-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.5);
+  transition-duration: 0.5s;
 }
 
 h1.title{
@@ -139,6 +167,7 @@ h5{
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+  transition-duration: 0.5s;
 }
 
 .active {
@@ -150,6 +179,7 @@ li a:hover {
   list-style-type: none;
   text-decoration: none;
   z-index: 1;
+
 }
 
 .dropdown-menu:hover div.dropdown-contents{
@@ -159,7 +189,13 @@ li a:hover {
 div.dropdown-contents a{
   display: block;
   background-color: black;
+  transition-duration: 0.2s;
   float: none;
+}
+
+div.dropdown-contents a:hover{
+  background-color: #333;
+  transition-duration: 0.2s;
 }
 
 /*bottom part*/
@@ -252,7 +288,7 @@ span{
 }
 
 .shortcut#sc-2{
-  background-image: url(images/mlb_logo.png);
+  background-image: url(images/mlb_logo.jpg);
   background-size: contain;
 }
 .shortcut#sc-3{
@@ -279,4 +315,17 @@ span{
   background-image: url(images/stretch_angels_logo.png);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+#{
+		-webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }
