@@ -1,10 +1,10 @@
-a:visited {
+div.main a:visited {
   text-decoration-style: none;
   text-decoration: none;
   color: white;
 }
 
-a {
+div.main a {
   text-decoration-style: none;
   text-decoration: none;
   color: white;
