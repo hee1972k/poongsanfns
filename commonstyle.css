@@ -10,6 +10,8 @@ Contents: all
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /***
@@ -18,7 +20,9 @@ Contents: everything in body part
 ***/
 body, html{
   height: 100%;
-  width: 100;
+  width: 100%;
+  min-height: 40%;
+  min-width: 60%;
 }
 
 body{
@@ -89,7 +93,7 @@ div.main{
   padding: 0;
   text-align: center;
   height: relative;
-  overflow: auto;
+  overflow: hidden;
 }
 
 h2{
@@ -112,6 +116,9 @@ h5{
 }
 
 /*Main Navigation Bar*/
+.main-nav{
+  overflow: hidden;
+}
 
 .main-nav a {
   text-decoration: none;
@@ -149,9 +156,16 @@ li a:hover {
 .active {
   background-color: yellowgreen;
 }
+
+.dropdown-menu{
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
 /*dropdown list menu contents*/
 .dropdown-contents{
   display: none;
+  position: absolute;
   list-style-type: none;
   text-decoration: none;
   /*z-index is a layer system of display of contents
@@ -188,7 +202,7 @@ div.bottom{
 
 div.bottom-contents{
   text-align: center;
-  padding: 1.5%;
+  padding: 15px 5px 15px 5px;
 }
 
 .bottom{
